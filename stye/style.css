@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --fonte-principal: "Roboto", sans-serif;
+    --fonte-secundaria: "Quicksand", sans-serif;
+    --cor-laranja: #ED7839;
+    --cor-fundo-titulos: #FDF1EB;
+    --cor-fonte: #4E4E4E;
+    --cor--terciaria: #ADA0A0;
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }  
+body p{
+    font-family: var(--fonte-secundaria);
+
+}
+
+.aside__topo { 
+    height: 68px;
+    background-color: #FFB354;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo__aside {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+
+.aside__container {
+    width: 220px; /* Largura original do aside */
+    top: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+
+}
+.menu__container ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    font-family: var(--fonte-secundaria);
+}
+.menu__item.clicado {
+    background-color: var(--cor-fundo-titulos); /* Define a cor de fundo igual à dos títulos */
+    font-family: var(--fonte-principal); /* Define a fonte igual à dos títulos */
+    font-weight: 500; /* Define o peso da fonte igual ao dos títulos */
+    color: var(--cor-fonte); /* Define a cor do texto igual à dos títulos */
+    position: relative; /* Define a posição relativa para permitir a posição absoluta do pseudo-elemento */
+    padding-left: 10px; /* Adiciona espaço à esquerda para o retângulo e o texto */
+}
+
+.menu__item.clicado::before {
+    content: ""; /* Adiciona conteúdo ao pseudo-elemento */
+    position: absolute; /* Define a posição absoluta para o pseudo-elemento */
+    left: 0; /* Alinha o pseudo-elemento à esquerda da li */
+    top: 0; /* Alinha o pseudo-elemento ao topo da li */
+    width: 5px; /* Define a largura do retângulo */
+    height: 100%; /* Define a altura do retângulo igual à altura da li */
+    background-color: var(--cor-laranja); /* Define a cor laranja para o retângulo */
+}
+
+
+
+.menu__container .menu__item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc; /* Adiciona uma linha separando os itens */
+}
+
+.menu__container .menu__item:last-child {
+    border-bottom: none; /* Remove a linha separando o último item */
+}
+.menu__item:hover {
+    background-color: #FDF1EB; /* Define a cor de fundo quando o mouse passa sobre a li */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+
+.main__content {
+    margin-left: 220px;
+}
+
+.cabecalho {
+    background-color: #FDF1EB;
+    margin-left: 220px;
+    font-family: var(--fonte-principal);
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Adiciona padding apenas nos lados */
+}
+.container{
+    display: flex;
+    text-align: right;
+}
+.cabecalho p{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0 5px 0;
+}
+.cabecalho h2{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.texto__container {
+    padding-left: 15px;
+}
+.parte__email{
+    margin-left: 450px;
+}
+.imagem-circular {
+    margin-left: 20px;
+    width: 40px; /* Aumenta o tamanho da imagem circular */
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imagem-circular img {
+    width: 100%;
+    height: auto;
+}
+.primeira__secao{
+    display: flex;
+}
+.principal__conteudo__video {
+    position: relative;
+    display: flex;
+    margin: 20px 0 0 40px;
+}
+.titulo-laranja {
+    color: var(--cor-laranja);
+    margin: 0 0 20px 0;
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    font-size: 23px; /* Restaura o tamanho original do título */
+}
+
+.botoes{
+    margin-left: 300px;
+    align-items: center;
+    width: 239px;
+}
+.botoes p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
+    font-family: var(--fonte-principal);
+    color: #ED7839;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.download{
+    width: 120px;
+    height: 31px;
+}
+.doi {
+    width: 43px;
+    height: 31px;
+}
+.favorito{
+    width: 43px;
+    height: 31px;
+}
+.video {
+    margin-left: 40px;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+}
+.video img {
+    width: 900px;
+}
+
+.detalhes__box {
+    display: inline-block;
+    width: 300px;
+    height: 500px;
+    margin-left: 150px; /* Reduzi a margem para evitar que o texto fique fora da caixa */
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+}
+
+.titulo_div {
+    height: 45px;
+    background-color: var(--cor-fundo-titulos);
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cor-fonte);
+    padding-left: 10px;
+    display: flex; /* Use flexbox para centralizar verticalmente o texto */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.detalhes__box p,
+.detalhes__box h3{
+    font-family: var(--fonte-secundaria);
+    padding-left: 10px; /* Adiciona padding para separar o texto da borda */
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--cor-fonte);
+    line-height: 1.2rem;
+}
+.bold{
+    font-weight: 700;
+}
+.detalhes__box ul {
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 30px;
+}
+.autores{
+    font-family: var(--fonte-secundaria);
+    margin-left: 10px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--cor-fonte);
+    
+}
+.terceiro__texto{
+    font-weight: 100;
+    color: var(--cor--terciaria);
+}
+
+.card_resumo {
+    width: 1350px;
+    border-radius: 5px;
+    margin-top: 25px;
+    height: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+
+.resumo__titulo {
+    height: 45px;
+}
+.lorem{
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 22.75px;
+    margin-top: 20px; 
+    padding-left: 5px;
+}
+.clicavel__ver-mais{
+    background-color: none;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.card_discussoes{
+    width: 1350px;
+    border-radius: 5px;
+    margin-top: 25px;
+    height: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+.compartilhe{
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-laranja);
+    font-weight: 700;
+    margin: 20px 0 20px 0 ;
+}
+.icones{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.texto__curto__discussoes{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-fonte);
+    font-size: 14px;
+    line-height: 19.25px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.imagem_centralizada{  
+    text-align: center;
+
+}
+.topicos{
+    width: 95%;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px 0px 10px 30px;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+}
+
+.titulo-topico{
+    font-family: var(--fonte-principal);
+
+}
+.titulo{
+    display: inline-block;
+    gap: 30px;
+    padding: 20px;
+}
+.titulo h3{
+    font-size: 16px;
+    color: var(--cor-laranja);
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+}
+.topico__texto{
+    margin-top: 20px;
+}
+
+.icones__topico {
+    display: flex; /* Define o layout dos ícones como flexível */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 10px; /* Define o espaçamento entre os ícones */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.icones__topico img {
+    width: auto; /* Ajusta a largura dos ícones */
+    height: auto;
+    
+}
+
+.icones__topico p {
+    margin-right: 10px; /* Adiciona um espaço à direita dos textos */
+}
+
+.rodape{
+    width: 1146px;
+    height: 181px;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+.rodape img{
+    width: 1146px;
+
+}
+/* Estilos para o formulário de criação de tópico */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.137);
+    background-color: #fff;
+}
+
+form input[type="text"],
+form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+}
+
+form textarea {
+    height: 100px; /* Defina a altura desejada */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: var(--cor-laranja);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darken(var(--cor-laranja), 10%);
+}
